@@ -1,0 +1,48 @@
+.noUi-tooltip {
+  display: none;
+}
+.noUi-active .noUi-tooltip {
+  display: block;
+}
+.noUi-pips{
+  color: grey;
+}
+.noUi-connect {
+  background: #6c757d;
+}
+.grecaptcha-badge{
+  z-index:999;
+}
+
+.qtcaptcha .options button{
+  height: 35px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #007bff;
+  padding: .400rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s;
+  color: #fff;
+  background-color: #007bff;
+
+}
+
+.qtcaptcha .vue-captcha{
+  width: 100%;
+  padding: 10px;
+  border-radius: .25rem;
+  border: 1px solid #ccd3d9 !important;
+}
+
+.qtcaptcha .options button i
+{
+  color:white;
+}

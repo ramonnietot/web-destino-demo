@@ -1,0 +1,450 @@
+/* Global CSS, you probably don't need that */
+
+  .clearfix:after {
+      clear: both;
+      content: "";
+      display: block;
+      height: 0;
+  }
+
+
+  /* Breadcrups CSS */
+
+  .step {
+    text-align: center;
+    width:  calc(25% - 6px);
+  }
+  .step-first {
+    text-align: center;
+    width: calc(25% - 3px);
+  }
+  .step-last {
+    text-align: center;
+    width: calc(25% - 3px);
+  }
+  @media only screen and (min-width : 0px) and (max-width : 1000px) {
+
+    .hide-step-text{
+      display:none;
+    }
+  }
+
+  .btn-step {
+    border: 3px solid #666666;
+    color: #666666;
+    margin-right: 10px;
+  }
+  .btn-step-active {
+    border: 3px solid #fff;
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  .arrow-steps .step {
+  	font-size: 14px;
+  	color: #666;
+  	cursor: default;
+  	margin: 0 3px;
+  	padding: 10px 10px 10px 30px;
+  	/*min-width: 180px;*/
+  	float: left;
+  	position: relative;
+  	background-color: #d9e3f7;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .arrow-steps .step:after,
+  .arrow-steps .step:before {
+  	content: " ";
+  	position: absolute;
+  	top: 0;
+  	right: -17px;
+  	width: 0;
+  	height: 0;
+  	border-top: 30px solid transparent;
+  	border-bottom: 32px solid transparent;
+  	border-left: 17px solid #d9e3f7;
+  	z-index: 2;
+    transition: border-color 0.2s ease;
+  }
+
+  .arrow-steps .step:before {
+  	right: auto;
+  	left: 0;
+  	border-left: 17px solid #fff;
+  	z-index: 0;
+  }
+
+  .arrow-steps .step:first-child:before {
+  	border: none;
+  }
+
+  .arrow-steps .step:first-child {
+  	border-top-left-radius: 4px;
+  	border-bottom-left-radius: 4px;
+  }
+
+  .arrow-steps .step span {
+  	position: relative;
+  }
+
+  .arrow-steps .step span:before {
+  	opacity: 0;
+  	content: "✔";
+  	position: absolute;
+  	top: -2px;
+  	left: -20px;
+  }
+
+  .arrow-steps .step.done span:before {
+  	opacity: 1;
+  	-webkit-transition: opacity 0.3s ease 0.5s;
+  	-moz-transition: opacity 0.3s ease 0.5s;
+  	-ms-transition: opacity 0.3s ease 0.5s;
+  	transition: opacity 0.3s ease 0.5s;
+  }
+
+  .arrow-steps .step.current {
+  	color: #fff;
+  	background-color: #23468c;
+  }
+
+  .arrow-steps .step.current:after {
+  	border-left: 17px solid #23468c;
+  }
+    .arrow-steps .step-last {
+    	font-size: 14px;
+
+    	color: #666;
+    	cursor: default;
+    	margin: 0 0 0 3px ;
+    	padding: 10px 10px 10px 30px;
+    /*	min-width: 180px;*/
+    	float: left;
+    	position: relative;
+    	background-color: #d9e3f7;
+    	-webkit-user-select: none;
+    	-moz-user-select: none;
+    	-ms-user-select: none;
+    	user-select: none;
+      transition: background-color 0.2s ease;
+    }
+
+    .arrow-steps .step-first {
+    	font-size: 14px;
+
+    	color: #666;
+    	cursor: default;
+    	margin: 0 3px 0 0px ;
+    	padding: 10px 10px 10px 30px;
+    	/*min-width: 180px;*/
+    	float: left;
+    	position: relative;
+    	background-color: #d9e3f7;
+    	-webkit-user-select: none;
+    	-moz-user-select: none;
+    	-ms-user-select: none;
+    	user-select: none;
+      transition: background-color 0.2s ease;
+    }
+
+
+    /*.arrow-steps .step-last:after,*/
+    .arrow-steps .step-last:before {
+    	content: " ";
+    	position: absolute;
+    	top: 0;
+    	right: -17px;
+    	width: 0;
+    	height: 0;
+    	border-top: 30px solid transparent;
+    	border-bottom: 32px solid transparent;
+    	border-left: 17px solid #d9e3f7;
+    	z-index: 2;
+      transition: border-color 0.2s ease;
+    }
+
+    .arrow-steps .step-last:before {
+    	right: auto;
+    	left: 0;
+    	border-left: 17px solid #fff;
+    	z-index: 0;
+    }
+
+    .arrow-steps .step-last:first-child:before {
+    	border: none;
+    }
+
+    .arrow-steps .step-last:first-child {
+    	border-top-left-radius: 4px;
+    	border-bottom-left-radius: 4px;
+    }
+
+    .arrow-steps .step-last span {
+    	position: relative;
+    }
+
+    .arrow-steps .step-last span:before {
+    	opacity: 0;
+    	content: "✔";
+    	position: absolute;
+    	top: -2px;
+    	left: -20px;
+    }
+
+    .arrow-steps .step-last.done span:before {
+    	opacity: 1;
+    	-webkit-transition: opacity 0.3s ease 0.5s;
+    	-moz-transition: opacity 0.3s ease 0.5s;
+    	-ms-transition: opacity 0.3s ease 0.5s;
+    	transition: opacity 0.3s ease 0.5s;
+    }
+
+    .arrow-steps .step-last.current {
+    	color: #fff;
+    	background-color: #23468c;
+    }
+
+     .arrow-steps .step-first:after,
+     .arrow-steps .step-first:before {
+    	content: " ";
+    	position: absolute;
+    	top: 0;
+    	right: -17px;
+    	width: 0;
+    	height: 0;
+    	border-top: 30px solid transparent;
+    	border-bottom: 32px solid transparent;
+    	border-left: 17px solid #d9e3f7;
+    	z-index: 2;
+      transition: border-color 0.2s ease;
+    }
+
+    .arrow-steps .step-first:before {
+    	right: auto;
+    	left: 0;
+    	border-left: 17px solid #fff;
+    	z-index: 0;
+    }
+
+    .arrow-steps .step-first:first-child:before {
+    	border: none;
+    }
+
+    .arrow-steps .step-first:first-child {
+    	border-top-left-radius: 4px;
+    	border-bottom-left-radius: 4px;
+    }
+
+    .arrow-steps .step-first span {
+    	position: relative;
+    }
+
+    .arrow-steps .step-first span:before {
+    	opacity: 0;
+    	content: "✔";
+    	position: absolute;
+    	top: -2px;
+    	left: -20px;
+    }
+
+    .arrow-steps .step-first.done span:before {
+    	opacity: 1;
+    	-webkit-transition: opacity 0.3s ease 0.5s;
+    	-moz-transition: opacity 0.3s ease 0.5s;
+    	-ms-transition: opacity 0.3s ease 0.5s;
+    	transition: opacity 0.3s ease 0.5s;
+    }
+
+    .arrow-steps .step-first.current {
+    	color: #fff;
+    	background-color: #23468c;
+    }
+    .arrow-steps .step-first.current:after {
+    	border-left: 17px solid #23468c;
+    }
+.noUi-tooltip {
+  display: none;
+}
+.noUi-active .noUi-tooltip {
+  display: block;
+}
+.noUi-pips{
+  color: grey;
+}
+.noUi-connect {
+  background: #6c757d;
+}
+.grecaptcha-badge{
+  z-index:999;
+}
+
+.qtcaptcha .options button{
+  height: 35px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #007bff;
+  padding: .400rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s;
+  color: #fff;
+  background-color: #007bff;
+
+}
+
+.qtcaptcha .vue-captcha{
+  width: 100%;
+  padding: 10px;
+  border-radius: .25rem;
+  border: 1px solid #ccd3d9 !important;
+}
+
+.qtcaptcha .options button i
+{
+  color:white;
+}
+
+.icon-rotate {
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+}
+.center{
+  width: 100%;
+  text-align: center;
+}
+
+.card-img-top{
+  
+  width:100%;
+}
+
+.hotel-title-map{
+  font-size: 2em;
+}
+.hotel-address-map {
+  font-size: 1.2em;
+
+}
+
+.price {
+  font-size: 3em;
+  margin-left: 10px;
+
+}
+
+.oldprice {
+  font-size: 1rem;
+  text-decoration: line-through;
+  color:grey;
+}
+
+.category {
+  color: gold;
+  border-color: black;
+  padding-top: 5px;
+
+}
+a.deco-none {
+  color:#000000 !important;
+  text-decoration:none;
+}
+a.deco-none:hover {
+  color:#000000 !important;
+  text-decoration:none;
+}
+ .my-card-body-map{
+    height: 12em;
+  }
+  .my-card-title-map{
+    font-size: 1rem;
+    font-weight: bold;
+     height: 4em;
+  }
+  .my-card-text-map{
+    height: 8em;  
+    font-size: 0.8rem;
+    overflow:hidden; 
+    padding-bottom:20px;
+    color:grey;
+  }
+  .card-price{
+    color: black;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    max-width: 75%;
+    max-height: 70%;
+    background: white;
+    padding: 10px;
+    font-size: 1.4rem ;
+    font-weight: bold;
+     box-shadow: -5px  0px 2px 1px rgba(0,0,0,0.3),
+                  -5px  5px 2px 1px rgba(0,0,0,0.5),
+                   0px 5px 2px -2px rgba(0,0,0,0.3)
+     ;
+     
+  }
+  .offer-title{
+    color: green;
+    font-size: 0.9rem;
+    padding-bottom:5px;
+  }
+  .offer-text{
+    color: black;
+    font-size: 12px;
+    
+  }
+  .offer-price{
+    color: green;
+    font-size: 1.5rem;
+  }
+  .card-image{
+    position: relative;
+      min-height: 200px;
+      border-bottom: 1px solid grey;
+    
+  }
+  .card-img-top {
+    height: 200px;
+  }
+  .card-price.nodispo {
+    color: red;
+    font-size: 0.7rem;
+  }
+  .qt-inputs-med{
+    background-color: lightgray;
+    border-radius: 0;
+    text-align: center !important;
+    padding:27px 0;
+    font-size:20px;
+    font-weight: bold;
+  }
+  @media only screen and (min-width : 0px) and (max-width : 700px) {
+    .cardcomplement{
+      width:70vw;
+      margin-top: 30px;
+    }
+  }
+  @media only screen and (min-width : 700px) {
+    .cardcomplement {
+      /*width: calc(100px + 15vw);*/
+      width: 350px;
+      margin-top: 10px;
+    }
+
+    
+  }
